@@ -1,0 +1,298 @@
+.background{
+    position:absolute;
+    /* background-image:url(https://images.unsplash.com/photo-1499346030926-9a72daac6c63?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxleHBsb3JlLWZlZWR8OHx8fGVufDB8fHw%3D&w=1000&q=80); */
+    background-color: darkseagreen;
+    height:100vh;
+    width:100vw;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding:10px;
+    overflow:hidden;
+}
+.box{
+    position: absolute;
+    background-image:  linear-gradient(to bottom right, white, lightsteelblue,lightskyblue);
+    /* background:radial-gradient(ellipse at center, lightsteelblue 0%,lightskyblue 35%,white 100%); */
+    overflow: hidden;
+    height: 66vh;
+    width: 60vw; 
+    border-radius: 20px;  
+    top:17vh;
+    left:20vw;
+    padding:20px;
+    z-index: 1;
+}
+.box-title{
+    position: absolute;
+    left:20vw;
+    top:8vh;
+    font-size:8vh;
+    color:lightgoldenrodyellow;
+}
+  .input-city{
+      border-radius:25px;
+      border:2px solid lightsteelblue;
+      width:40%;
+      background-image:linear-gradient(to right, white, lightsteelblue);;
+  }
+  .input-dark{
+    border-radius:25px;
+    border:2px solid cadetblue;
+    width:40%;
+    background-image:linear-gradient(to right,darkslategray, black);;
+ }
+  .input-city:focus{
+      color:darkslategray;
+      outline: none;
+      border:2px solid grey;
+  }
+  .input-dark:focus{
+    color:whitesmoke;
+    outline: none;
+    border:2px solid black;
+}
+  .flex-container{
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+  }
+  
+  .location{
+      /* position: relative;
+      top:10vh;
+      left:5%; */
+      margin: 30px 0;
+      font-size: 8vh;
+      color:darkseagreen;
+  }
+  .temp{
+      /* position: relative;
+      top:12vh;
+      left:10%; */
+      text-align: center;
+      font-size: 6vh;
+      color:cadetblue;
+  }
+  .tempmin{
+    /* position: relative;
+    top:12vh;
+    left:15%; */
+    text-align: center;
+    font-size: 3vh;
+    color:cadetblue;
+  }
+  .error{
+    position: relative;
+    top:10vh;
+      text-align: center;
+      color:cadetblue;
+  }
+  .info2,.info{
+      /* position:relative;
+      left:70%;
+      top:100px; */
+      margin:30px;
+      margin-top: 60px;
+      display:flex;
+      flex-direction: column;
+      justify-content: space-around;
+  }
+  .pressure,.humidity{
+    text-align: center;
+    font-size: 3vh;
+    color:cadetblue;
+  }
+  .sky{
+    text-align: center;
+    margin: 20px 0 0 0;
+    font-size: 7vh;
+    color:cadetblue;
+  }
+  .sky2{
+    text-align: center;
+    margin: 0 0 30px 0;
+    font-size: 4vh;
+    color:cadetblue;
+  }
+  .wave {
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg) repeat-x; 
+    position: absolute;
+    top: 73vh;
+    width: 6400px;
+    height: 198px;
+    animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
+    transform: translate3d(0, 0, 0);
+    overflow: hidden;
+  }
+  
+  .wave:nth-of-type(2) {
+    top: 73vh;
+    animation: wave 8s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 10s ease -1.25s infinite;
+    opacity: 1;
+    overflow-x: hidden;
+  }
+  
+  @keyframes wave {
+    0% {
+      margin-left: 0;
+    }
+    100% {
+      margin-left: -1600px;
+    }
+  }
+  
+  @keyframes swell {
+    0%, 100% {
+      transform: translate3d(0,-25px,0);
+    }
+    50% {
+      transform: translate3d(0,5px,0);
+    }
+  }
+  /* The switch - the box around the slider */
+  .switchdark{
+    display: flex;
+    flex-direction: row-reverse;
+    position: relative;
+    top:-5vh;
+    width:20vw;
+    left:38vw;
+  }
+  .dark-icons{
+      color:darkseagreen;
+      font-size:3vh;
+      margin-top:7px;
+      margin-left:8px;
+      margin-right:8px;
+  }
+  .light-icons{
+    color:darkslategray;
+    font-size:3vh;
+    margin-top:7px;
+    margin-left:8px;
+    margin-right:8px;
+  }
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch .switchcheck{
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color:white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: darkseagreen;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+ .switchcheck:checked + .slider {
+    background-color: darkslategray;
+  }
+  
+  .switchcheck:focus + .slider {
+    box-shadow: 0 0 1px darkslategray;
+  }
+  
+  .switchcheck:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+  .backdark{
+      background-color: darkslategray;
+      overflow:hidden;
+      position:absolute;
+      height:100vh;
+      width:100vw;
+     background-repeat: no-repeat;
+     background-size: 100%;
+     padding:10px;
+  }
+  .boxdark{
+    position: absolute;
+    background-image:  linear-gradient(to bottom right, darkslategray,black);
+    overflow: hidden;
+    height: 66vh;
+    width: 60vw; 
+    border-radius: 20px;  
+    top:17vh;
+    left:20vw;
+    padding:20px;
+    z-index: 1;
+  }
+.sunin{
+    position: absolute;
+    color:lightgoldenrodyellow;
+    font-size: 35vh;
+    left:60vw;
+    top:200px;
+    animation:scale 4s;
+}
+/* @keyframes spin{
+    100%{
+      transform:rotate(360deg);
+    }
+  } */
+@keyframes scale{
+    0% {
+        transform: translate3d(200px,-200px,0);
+      }
+    100% {
+        transform: translate3d(0,0,0);
+      }
+  }
+.sunout{
+    position: absolute;
+    color:lightgoldenrodyellow;
+    font-size: 35vh;
+    left:72vw;
+    animation:scale2 4s,spin2 5s linear infinite;
+}
+@keyframes spin2{
+    100%{
+      transform:rotate(360deg);
+    }
+  }
+@keyframes scale2{
+    0% {
+        transform: translate3d(-250px,250px,0);
+      }
+    100% {
+        transform: translate3d(0,0,0);
+      }
+  }
