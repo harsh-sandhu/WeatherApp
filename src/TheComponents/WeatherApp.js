@@ -34,7 +34,7 @@ const Myapp=()=>{
                 {!city||!country||!weather?(
                     <h1 className="error">No Data Available</h1>
                 ):(
-                    <div class="flex-container">
+                    <div className="flex-container">
                     <div className="info">
                     <h1 className="location"><i className="fas fa-street-view"></i>{search}, {country.country}</h1>
                     <h1 className="temp"><i className="fas fa-temperature-low"></i> {city.temp}°C</h1>

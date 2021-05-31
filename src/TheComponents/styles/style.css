@@ -155,7 +155,7 @@
     flex-direction: row-reverse;
     position: relative;
     top:-5vh;
-    width:20vw;
+    width:200px;
     left:38vw;
   }
   .dark-icons{
@@ -295,4 +295,80 @@
     100% {
         transform: translate3d(0,0,0);
       }
+  }
+  @media (max-width:800px) {
+    .box{
+      display: flex;
+      flex-direction: column;
+      width:96vw;
+      left:2vw;
+      opacity: 0.8;
+    }
+    .boxdark{
+      display: flex;
+      flex-direction: column;
+      width:96vw;
+      left:2vw;
+    }
+    .sunin{
+      left:20vw;
+    }
+    @keyframes scale{
+      0% {
+          transform: translate3d(200px,-200px,0);
+        }
+      100% {
+          transform: translate3d(0,0,0);
+        }
+    }
+    @keyframes scale2{
+      0% {
+          transform: translate3d(-250px,250px,0);
+        }
+      100% {
+          transform: translate3d(0,0,0);
+        }
+    }
+    .input-city{
+      width:88vw;
+    }
+    .input-dark{
+      width:88vw;
+    }
+    .switchdark{
+      top:2vh;
+      left:35vw;
+      opacity: 1;
+    }
+    .box-title{
+      left:3vw;
+    }
+    .wave{
+      top:80vh;
+    }
+    .flex-container{
+      flex-direction: column;
+    }
+    .location{
+      font-size:10vw;
+      margin-top:-35px;
+    }
+    .temp{
+      font-size:9vw;
+    }
+    .tempmin{
+      font-size:5vw;
+    }
+    .pressure,.humidity{
+      font-size:5vw;
+    }
+    .info2{
+      margin-top:-45px;
+    }
+    .sky{
+      font-size: 9vw;
+    }
+    .sky2{
+      font-size: 7vw;
+    }
   }
